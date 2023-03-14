@@ -1,8 +1,9 @@
 const Container = document.querySelector(".main-container__form");
 const Email = document.querySelector(".main-container__form__input");
 const Error = document.querySelector(".main-container__form__error");
+const button = document.querySelector(".main-container__form__button")
 
-Container.addEventListener('submit', (event)=> {
+button.addEventListener('click', (event)=> {
     event.preventDefault();
     const regExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
 
@@ -13,4 +14,4 @@ Container.addEventListener('submit', (event)=> {
         Email.style.border = '1px solid hsl(354, 100%, 66%)';
         Error.style.display = 'block'
     }
-})
+}) 
